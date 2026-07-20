@@ -16,5 +16,5 @@
  */
 const SILO_CONFIG = {
   // Example: "https://silo-api.onrender.com"
-  API_BASE_URL: "https://silo.onrender.com/",
+  API_BASE_URL: "https://silo-l86a.onrender.com/",
 };
