@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#080C14">
+<meta name="description" content="Silo automatically organizes your salary into budgeting envelopes. Read payslips, calculate deductions, track spending — entirely offline-capable, no AI.">
+<title>Silo — Every Salary Already Has a Job</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/favicon-32.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- ============================== LANDING ============================== -->
+<section id="view-landing" class="view active" aria-label="Landing page">
+  <nav class="flex items-center justify-between" style="max-width:1080px;margin:0 auto;padding:20px;">
+    <div class="brand" style="padding:0;">
+      <div class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2.5L7 7v13a1 1 0 001 1h8a1 1 0 001-1V7l-5-4.5z" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.5 12h9M7.5 16h9" stroke="white" stroke-width="1.4" stroke-linecap="round"/></svg>
+      </div>
+      <div><div class="brand-name">Silo</div></div>
+    </div>
+    <div class="flex gap-8">
+      <button class="btn btn-ghost" data-action="show-auth" data-mode="login">Log in</button>
+      <button class="btn btn-primary" data-action="show-auth" data-mode="register">Get started</button>
+    </div>
+  </nav>
+
+  <div class="landing-hero">
+    <span class="badge badge-info">Nigeria · Ghana · Kenya · South Africa</span>
+    <h1 class="mt-16">Every Salary Already Has a Job.</h1>
+    <p>Silo reads your payslip, works out your real net pay, and sorts it into envelopes for rent, transport, savings and more — automatically. No AI, no guesswork: just transparent rules you control.</p>
+    <div class="flex gap-12" style="justify-content:center;margin-top:28px;">
+      <button class="btn btn-primary" data-action="show-auth" data-mode="register">Create free account</button>
+      <button class="btn btn-secondary" data-action="scroll-to" data-target="how-it-works">See how it works</button>
+    </div>
+  </div>
+
+  <div class="landing-section" id="how-it-works">
+    <div class="section-header"><h2>How it works</h2></div>
+    <div class="grid grid-3">
+      <div class="glass-card feature-tile">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 4h16v16H4z" stroke="white" stroke-width="1.6"/><path d="M8 9h8M8 13h8M8 17h5" stroke="white" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <h3>1. Paste or scan your payslip</h3>
+        <p class="text-secondary mt-8" style="font-size:13.5px;">Drop in a PDF, photo, or pasted text. Our deterministic parser extracts every line item using documented rules — never a black box.</p>
+      </div>
+      <div class="glass-card feature-tile">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2.5L7 7v13a1 1 0 001 1h8a1 1 0 001-1V7l-5-4.5z" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.5 12h9M7.5 16h9" stroke="white" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+        <h3>2. Money lands in envelopes</h3>
+        <p class="text-secondary mt-8" style="font-size:13.5px;">Configurable percentage or fixed rules allocate net salary the moment it's calculated — rent, transport, savings, and whatever else you define.</p>
+      </div>
+      <div class="glass-card feature-tile">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 19V10M11 19V4M18 19v-7" stroke="white" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h3>3. Track, adjust, stay in budget</h3>
+        <p class="text-secondary mt-8" style="font-size:13.5px;">Log expenses against envelopes, see what's left in real time, and get reminded before rent or DSTV is due.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="landing-section">
+    <div class="section-header"><h2>Built for how people actually get paid</h2></div>
+    <div class="grid grid-4">
+      <div class="glass-card" style="font-size:13px;text-align:center;padding:16px;">Corporate employees</div>
+      <div class="glass-card" style="font-size:13px;text-align:center;padding:16px;">Civil servants & teachers</div>
+      <div class="glass-card" style="font-size:13px;text-align:center;padding:16px;">Freelancers</div>
+      <div class="glass-card" style="font-size:13px;text-align:center;padding:16px;">Families</div>
+    </div>
+  </div>
+
+  <div class="landing-section">
+    <div class="section-header"><h2>Simple pricing</h2></div>
+    <div class="grid grid-3">
+      <div class="glass-card pricing-card">
+        <div class="text-secondary" style="font-size:13px;">Free</div>
+        <div class="price">₦0</div>
+        <p class="text-secondary" style="font-size:13px;">Unlimited envelopes · 3 months of payslip history</p>
+        <button class="btn btn-secondary btn-block mt-16" data-action="show-auth" data-mode="register">Start free</button>
+      </div>
+      <div class="glass-card pricing-card featured">
+        <span class="badge badge-info" style="position:absolute;top:-10px;left:50%;transform:translateX(-50%);">Popular</span>
+        <div class="text-secondary" style="font-size:13px;">Premium</div>
+        <div class="price">₦2,500<span style="font-size:13px;color:var(--text-muted);">/mo</span></div>
+        <p class="text-secondary" style="font-size:13px;">Full payslip history, advanced reports, cloud backup</p>
+        <button class="btn btn-primary btn-block mt-16" data-action="show-auth" data-mode="register">Go Premium</button>
+      </div>
+      <div class="glass-card pricing-card">
+        <div class="text-secondary" style="font-size:13px;">Business</div>
+        <div class="price">₦8,000<span style="font-size:13px;color:var(--text-muted);">/mo</span></div>
+        <p class="text-secondary" style="font-size:13px;">Multiple staff payrolls, priority support</p>
+        <button class="btn btn-secondary btn-block mt-16" data-action="show-auth" data-mode="register">Contact sales</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="landing-section text-muted" style="text-align:center;font-size:12.5px;border-top:1px solid var(--surface-border);">
+    © 2026 Silo. Deterministic budgeting, no AI, ever.
+  </footer>
+</section>
+
+<!-- ============================== AUTH ============================== -->
+<section id="view-auth" class="view" aria-label="Authentication">
+  <div class="auth-shell">
+    <div class="glass-card auth-card">
+      <div class="brand" style="padding:0 0 20px;justify-content:center;">
+        <div class="brand-mark">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2.5L7 7v13a1 1 0 001 1h8a1 1 0 001-1V7l-5-4.5z" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.5 12h9M7.5 16h9" stroke="white" stroke-width="1.4" stroke-linecap="round"/></svg>
+        </div>
+        <div class="brand-name">Silo</div>
+      </div>
+
+      <div class="chip-row" style="justify-content:center;margin-bottom:20px;">
+        <div class="chip active" data-auth-tab="login">Log in</div>
+        <div class="chip" data-auth-tab="register">Create account</div>
+      </div>
+
+      <form id="form-login" data-form="login">
+        <div class="field">
+          <label for="login-email">Email</label>
+          <input class="input" type="email" id="login-email" placeholder="you@example.com" required>
+        </div>
+        <div class="field">
+          <label for="login-password">Password</label>
+          <input class="input" type="password" id="login-password" placeholder="••••••••" required>
+        </div>
+        <button class="btn btn-primary btn-block" type="submit">Log in</button>
+      </form>
+
+      <form id="form-register" data-form="register" style="display:none;">
+        <div class="field">
+          <label for="reg-name">Full name</label>
+          <input class="input" type="text" id="reg-name" placeholder="Adaeze Nwosu" required>
+        </div>
+        <div class="field">
+          <label for="reg-email">Email</label>
+          <input class="input" type="email" id="reg-email" placeholder="you@example.com" required>
+        </div>
+        <div class="field">
+          <label for="reg-country">Country</label>
+          <select class="input" id="reg-country">
+            <option value="NG">Nigeria (₦ NGN)</option>
+            <option value="GH">Ghana (GH₵ GHS)</option>
+            <option value="KE">Kenya (KSh KES)</option>
+            <option value="ZA">South Africa (R ZAR)</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="reg-password">Password</label>
+          <input class="input" type="password" id="reg-password" placeholder="At least 8 characters, with a number" required minlength="8" pattern="(?=.*\d).{8,}" title="At least 8 characters, including at least one digit.">
+        </div>
+        <button class="btn btn-primary btn-block" type="submit">Create account</button>
+      </form>
+
+      <div class="flex" style="gap:10px;margin:18px 0;align-items:center;">
+        <div style="flex:1;height:1px;background:var(--surface-border-strong);"></div>
+        <span class="text-muted" style="font-size:11.5px;">or continue with</span>
+        <div style="flex:1;height:1px;background:var(--surface-border-strong);"></div>
+      </div>
+      <div class="grid grid-3" style="gap:8px;">
+        <button class="btn btn-secondary btn-sm" data-action="oauth-stub" data-provider="Google">Google</button>
+        <button class="btn btn-secondary btn-sm" data-action="oauth-stub" data-provider="Microsoft">Microsoft</button>
+        <button class="btn btn-secondary btn-sm" data-action="oauth-stub" data-provider="Apple">Apple</button>
+      </div>
+      <p class="text-muted mt-16" style="font-size:11.5px;text-align:center;">By continuing you agree to Silo's Terms & Privacy Policy.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== APP SHELL ============================== -->
+<div id="app-shell" class="app-shell" style="display:none;">
+  <aside class="sidebar" aria-label="Primary navigation">
+    <div class="brand">
+      <div class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 2.5L7 7v13a1 1 0 001 1h8a1 1 0 001-1V7l-5-4.5z" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M7.5 12h9M7.5 16h9" stroke="white" stroke-width="1.4" stroke-linecap="round"/></svg>
+      </div>
+      <div>
+        <div class="brand-name">Silo</div>
+        <div class="brand-tagline">Every salary has a job</div>
+      </div>
+    </div>
+
+    <div class="nav-item active" data-nav="dashboard" tabindex="0">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M4 13h6V4H4v9zM14 20h6v-9h-6v9zM4 20h6v-4H4v4zM14 10h6V4h-6v6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      Dashboard
+    </div>
+    <div class="nav-item" data-nav="upload" tabindex="0">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 16V4m0 0L7 9m5-5l5 5M4 16v3a2 2 0 002 2h12a2 2 0 002-2v-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Upload Payslip
+    </div>
+    <div class="nav-item" data-nav="history" tabindex="0">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M4 4h16v16H4z" stroke="currentColor" stroke-width="1.6"/><path d="M8 9h8M8 13h8M8 17h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      Payslip History
+    </div>
+    <div class="nav-item" data-nav="envelopes" tabindex="0">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M3 6l9 6 9-6M4 5h16a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V6a1 1 0 011-1z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      Envelopes
+    </div>
+    <div class="nav-item" data-nav="transactions" tabindex="0">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M7 8h13M7 8l3-3M7 8l3 3M17 16H4M17 16l-3-3M17 16l-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Transactions
+    </div>
+    <div class="nav-item" data-nav="reports" tabindex="0">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M4 19V10M11 19V4M18 19v-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      Reports
+    </div>
+
+    <div class="nav-section-label">Account</div>
+    <div class="nav-item" data-nav="settings" tabindex="0">
+      <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06A1.65 1.65 0 004.6 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06A1.65 1.65 0 009 4.6a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06A1.65 1.65 0 0019.4 9c.14.36.22.75.22 1.15V10.85c0 .4-.08.79-.22 1.15z" stroke="currentColor" stroke-width="1.2"/></svg>
+      Settings
+    </div>
+    <div class="nav-item" data-action="logout" tabindex="0">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4M16 17l5-5-5-5M21 12H9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Log out
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="glass-card" style="padding:14px;">
+        <div style="font-size:12px;font-weight:600;">Free plan</div>
+        <div class="text-muted" style="font-size:11px;margin-top:2px;">Unlimited envelopes · 3mo history</div>
+        <button class="btn btn-primary btn-sm btn-block mt-8" data-nav="settings" data-settings-tab="subscription">Upgrade</button>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main" id="main-content">
+    <div class="install-banner" id="install-banner">
+      <div class="flex items-center gap-12">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 16V4m0 0L7 9m5-5l5 5M4 20h16" stroke="var(--color-accent)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span style="font-size:13px;">Install Silo for offline access and a native app feel.</span>
+      </div>
+      <div class="flex gap-8">
+        <button class="btn btn-primary btn-sm" id="install-btn">Install</button>
+        <button class="btn btn-ghost btn-sm" id="install-dismiss">Dismiss</button>
+      </div>
+    </div>
+
+    <!-- ---- DASHBOARD ---- -->
+    <section id="view-dashboard" class="view active" aria-label="Dashboard">
+      <div class="topbar">
+        <div>
+          <h1>Welcome back<span id="dash-username"></span></h1>
+          <div class="subtitle" id="dash-date"></div>
+        </div>
+        <button class="btn btn-primary" data-nav="upload">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+          Upload payslip
+        </button>
+      </div>
+
+      <div class="grid grid-4" id="dash-stats"></div>
+
+      <div class="grid split-14-1" style="margin-top:20px;" id="dash-two-col">
+        <div class="glass-card">
+          <div class="section-header">
+            <h2>Envelope summary</h2>
+            <span class="link" data-nav="envelopes">View all</span>
+          </div>
+          <div class="grid grid-3" id="dash-envelopes"></div>
+        </div>
+        <div class="glass-card">
+          <div class="section-header"><h2>Upcoming bills</h2></div>
+          <div id="dash-bills"></div>
+        </div>
+      </div>
+
+      <div class="glass-card mt-24">
+        <div class="section-header">
+          <h2>Recent transactions</h2>
+          <span class="link" data-nav="transactions">View all</span>
+        </div>
+        <div id="dash-transactions"></div>
+      </div>
+    </section>
+
+    <!-- ---- UPLOAD PAYSLIP ---- -->
+    <section id="view-upload" class="view" aria-label="Upload payslip">
+      <div class="topbar">
+        <div><h1>Upload payslip</h1><div class="subtitle">Paste, drop, or capture — parsed instantly and fully offline.</div></div>
+      </div>
+
+      <div class="grid split-1-1">
+        <div class="glass-card">
+          <div class="chip-row mt-8" style="margin-bottom:16px;">
+            <div class="chip active" data-country="NG">🇳🇬 Nigeria</div>
+            <div class="chip" data-country="GH">🇬🇭 Ghana</div>
+            <div class="chip" data-country="KE">🇰🇪 Kenya</div>
+            <div class="chip" data-country="ZA">🇿🇦 South Africa</div>
+          </div>
+          <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Upload payslip file">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 16V4m0 0L7 9m5-5l5 5M4 16v3a2 2 0 002 2h12a2 2 0 002-2v-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div style="font-size:13.5px;font-weight:600;">Drag & drop, paste, or click to select</div>
+            <div class="text-muted" style="font-size:12px;margin-top:4px;">PDF, JPEG, PNG, HEIC, TXT — text is extracted locally when possible</div>
+            <input type="file" id="file-input" accept=".pdf,.jpg,.jpeg,.png,.heic,.txt,image/*" hidden>
+          </div>
+          <div class="field mt-16">
+            <label for="paste-area">Or paste payslip text directly</label>
+            <textarea class="input" id="paste-area" rows="8" placeholder="Employee Name: ...&#10;Basic Salary: ...&#10;Net Pay: ..."></textarea>
+          </div>
+          <button class="btn btn-primary btn-block" id="parse-btn">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M9 12l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke="white" stroke-width="1.6"/></svg>
+            Parse payslip
+          </button>
+        </div>
+
+        <div class="glass-card" id="parse-result-card" style="display:none;">
+          <div class="section-header">
+            <h2>Extracted details</h2>
+            <span id="parse-status-badge"></span>
+          </div>
+          <div id="parse-notes"></div>
+          <div id="parse-fields" class="mt-16"></div>
+          <button class="btn btn-primary btn-block mt-16" id="confirm-allocate-btn">Confirm & allocate to envelopes</button>
+        </div>
+        <div class="glass-card empty-state" id="parse-empty-card">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4 4h16v16H4z" stroke="currentColor" stroke-width="1.4"/><path d="M8 9h8M8 13h8M8 17h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          <div>Extracted fields will appear here — every value traces back to a regex rule you can inspect, never a guess.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---- PAYSLIP HISTORY ---- -->
+    <section id="view-history" class="view" aria-label="Payslip history">
+      <div class="topbar"><div><h1>Payslip history</h1><div class="subtitle">Every payslip you've parsed, with its validation status.</div></div></div>
+      <div class="glass-card"><div id="history-list"></div></div>
+    </section>
+
+    <!-- ---- ENVELOPES ---- -->
+    <section id="view-envelopes" class="view" aria-label="Envelopes">
+      <div class="topbar">
+        <div><h1>Envelopes</h1><div class="subtitle">Configurable budgeting buckets — create, merge, split, lock.</div></div>
+        <div class="flex gap-8">
+          <button class="btn btn-secondary" data-action="open-modal" data-modal="rules">Allocation rules</button>
+          <button class="btn btn-primary" data-action="open-modal" data-modal="create-envelope">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+            New envelope
+          </button>
+        </div>
+      </div>
+      <div class="grid grid-4" id="envelopes-grid"></div>
+    </section>
+
+    <!-- ---- TRANSACTIONS ---- -->
+    <section id="view-transactions" class="view" aria-label="Transactions">
+      <div class="topbar">
+        <div><h1>Transactions</h1><div class="subtitle">Every expense, income, transfer, and refund.</div></div>
+        <button class="btn btn-primary" data-action="open-modal" data-modal="add-transaction">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+          Add transaction
+        </button>
+      </div>
+      <div class="glass-card">
+        <div class="flex gap-8 mt-8" style="margin-bottom:16px;flex-wrap:wrap;">
+          <input class="input" id="txn-search" placeholder="Search transactions..." style="max-width:240px;">
+          <select class="input" id="txn-filter-type" style="max-width:160px;">
+            <option value="">All types</option>
+            <option value="expense">Expense</option>
+            <option value="income">Income</option>
+            <option value="transfer">Transfer</option>
+            <option value="refund">Refund</option>
+          </select>
+        </div>
+        <div id="transactions-list"></div>
+      </div>
+    </section>
+
+    <!-- ---- REPORTS ---- -->
+    <section id="view-reports" class="view" aria-label="Reports">
+      <div class="topbar">
+        <div><h1>Reports</h1><div class="subtitle">Deterministic aggregation — plain arithmetic, no inference.</div></div>
+        <div class="flex gap-8">
+          <select class="input" id="report-period" style="max-width:160px;">
+            <option value="daily">Daily</option>
+            <option value="weekly">Weekly</option>
+            <option value="monthly" selected>Monthly</option>
+            <option value="quarterly">Quarterly</option>
+            <option value="annual">Annual</option>
+          </select>
+          <button class="btn btn-secondary" data-action="export-report" data-format="csv">Export CSV</button>
+        </div>
+      </div>
+
+      <div class="grid grid-3" id="report-stats"></div>
+
+      <div class="grid split-1-1" style="margin-top:20px;">
+        <div class="glass-card">
+          <div class="section-header"><h2>Expense categories</h2></div>
+          <div id="report-categories"></div>
+        </div>
+        <div class="glass-card">
+          <div class="section-header"><h2>Budget performance</h2></div>
+          <div id="report-budget"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---- SETTINGS ---- -->
+    <section id="view-settings" class="view" aria-label="Settings">
+      <div class="topbar"><div><h1>Settings</h1><div class="subtitle">Currency, theme, notifications, privacy, and account.</div></div></div>
+
+      <div class="grid split-sidebar">
+        <div class="glass-card" style="padding:10px;height:fit-content;">
+          <div class="nav-item active" data-settings-tab="general">General</div>
+          <div class="nav-item" data-settings-tab="notifications">Notifications</div>
+          <div class="nav-item" data-settings-tab="budget">Budget defaults</div>
+          <div class="nav-item" data-settings-tab="payment">Payment account</div>
+          <div class="nav-item" data-settings-tab="subscription">Subscription</div>
+          <div class="nav-item" data-settings-tab="privacy">Privacy & data</div>
+        </div>
+
+        <div>
+          <div class="glass-card settings-pane" data-settings-pane="general">
+            <h2 style="font-size:15px;margin-bottom:16px;">General</h2>
+            <div class="field">
+              <label for="set-currency">Currency</label>
+              <select class="input" id="set-currency">
+                <option value="NGN">₦ Nigerian Naira</option>
+                <option value="GHS">GH₵ Ghanaian Cedi</option>
+                <option value="KES">KSh Kenyan Shilling</option>
+                <option value="ZAR">R South African Rand</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="set-country">Country</label>
+              <select class="input" id="set-country">
+                <option value="NG">Nigeria</option>
+                <option value="GH">Ghana</option>
+                <option value="KE">Kenya</option>
+                <option value="ZA">South Africa</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="set-theme">Theme</label>
+              <select class="input" id="set-theme">
+                <option value="dark">Dark</option>
+                <option value="light">Light</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="set-language">Language</label>
+              <select class="input" id="set-language">
+                <option value="en">English</option>
+              </select>
+            </div>
+            <label class="flex items-center gap-8" style="font-size:13px;margin-top:8px;">
+              <input type="checkbox" id="set-high-contrast"> High contrast mode
+            </label>
+            <label class="flex items-center gap-8" style="font-size:13px;margin-top:8px;">
+              <input type="checkbox" id="set-reduced-motion"> Reduced motion
+            </label>
+            <button class="btn btn-primary mt-16" id="save-general-btn">Save changes</button>
+          </div>
+
+          <div class="glass-card settings-pane" data-settings-pane="notifications" style="display:none;">
+            <h2 style="font-size:15px;margin-bottom:16px;">Notification preferences</h2>
+            <label class="flex items-center gap-8" style="font-size:13px;margin-bottom:10px;"><input type="checkbox" checked> Salary day reminders</label>
+            <label class="flex items-center gap-8" style="font-size:13px;margin-bottom:10px;"><input type="checkbox" checked> Upcoming rent & bills</label>
+            <label class="flex items-center gap-8" style="font-size:13px;margin-bottom:10px;"><input type="checkbox" checked> Savings goal milestones</label>
+            <label class="flex items-center gap-8" style="font-size:13px;margin-bottom:10px;"><input type="checkbox"> Browser push notifications</label>
+            <button class="btn btn-secondary mt-8" id="enable-push-btn">Enable browser notifications</button>
+          </div>
+
+          <div class="glass-card settings-pane" data-settings-pane="budget" style="display:none;">
+            <h2 style="font-size:15px;margin-bottom:16px;">Default allocation rules</h2>
+            <p class="text-secondary" style="font-size:13px;">These apply automatically the next time a payslip is confirmed. Manage them from Envelopes → Allocation rules.</p>
+            <button class="btn btn-secondary mt-8" data-action="open-modal" data-modal="rules">Edit allocation rules</button>
+          </div>
+
+          <div class="glass-card settings-pane" data-settings-pane="payment" style="display:none;">
+            <h2 style="font-size:15px;margin-bottom:10px;">Payment account</h2>
+            <p class="text-secondary" style="font-size:13px;margin-bottom:16px;">
+              Generate a real bank account number (via Paystack) that your employer or payer can send your salary
+              into. Money received here is split automatically across your envelopes using the split from your
+              most recently uploaded payslip. This is the one feature in Silo that talks to a server — everything
+              else on this page stays fully local to this device.
+            </p>
+            <div id="payment-account-panel"><!-- rendered by renderPaymentAccountPane() --></div>
+          </div>
+
+          <div class="glass-card settings-pane" data-settings-pane="subscription" style="display:none;">
+            <h2 style="font-size:15px;margin-bottom:16px;">Subscription</h2>
+            <div class="grid grid-3">
+              <div class="glass-card pricing-card"><div class="text-secondary" style="font-size:12.5px;">Free</div><div class="price" style="font-size:22px;">₦0</div><span class="badge badge-success">Current plan</span></div>
+              <div class="glass-card pricing-card featured"><div class="text-secondary" style="font-size:12.5px;">Premium</div><div class="price" style="font-size:22px;">₦2,500/mo</div><button class="btn btn-primary btn-sm mt-8">Upgrade</button></div>
+              <div class="glass-card pricing-card"><div class="text-secondary" style="font-size:12.5px;">Business</div><div class="price" style="font-size:22px;">₦8,000/mo</div><button class="btn btn-secondary btn-sm mt-8">Contact sales</button></div>
+            </div>
+          </div>
+
+          <div class="glass-card settings-pane" data-settings-pane="privacy" style="display:none;">
+            <h2 style="font-size:15px;margin-bottom:16px;">Privacy & data</h2>
+            <p class="text-secondary" style="font-size:13px;">All your data is stored locally on this device (IndexedDB). Raw payslip text is discarded immediately after parsing — only the extracted figures are kept.</p>
+            <div class="flex gap-8 mt-16">
+              <button class="btn btn-secondary" id="export-data-btn">Export my data (JSON)</button>
+              <button class="btn btn-danger" id="delete-account-btn">Delete all data</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<!-- Bottom nav (mobile) -->
+<nav class="bottom-nav" id="bottom-nav" aria-label="Mobile navigation">
+  <div class="nav-item active" data-nav="dashboard"><svg viewBox="0 0 24 24" fill="none"><path d="M4 13h6V4H4v9zM14 20h6v-9h-6v9zM4 20h6v-4H4v4zM14 10h6V4h-6v6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>Home</div>
+  <div class="nav-item" data-nav="upload"><svg viewBox="0 0 24 24" fill="none"><path d="M12 16V4m0 0L7 9m5-5l5 5M4 16v3a2 2 0 002 2h12a2 2 0 002-2v-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Upload</div>
+  <div class="nav-item" data-nav="envelopes"><svg viewBox="0 0 24 24" fill="none"><path d="M3 6l9 6 9-6M4 5h16a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V6a1 1 0 011-1z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>Envelopes</div>
+  <div class="nav-item" data-nav="transactions"><svg viewBox="0 0 24 24" fill="none"><path d="M7 8h13M7 8l3-3M7 8l3 3M17 16H4M17 16l-3-3M17 16l-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Activity</div>
+  <div class="nav-item" data-nav="settings"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.6"/></svg>Settings</div>
+</nav>
+
+<!-- ============================== MODALS ============================== -->
+<div class="modal-overlay" id="modal-create-envelope">
+  <div class="modal">
+    <div class="modal-header"><h3>New envelope</h3><svg class="modal-close" data-action="close-modal" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+    <div class="field"><label for="new-env-name">Name</label><input class="input" id="new-env-name" placeholder="e.g. School Fees"></div>
+    <div class="field"><label for="new-env-color">Color</label><input class="input" type="color" id="new-env-color" value="#6366F1" style="height:42px;padding:4px;"></div>
+    <button class="btn btn-primary btn-block" id="create-env-confirm">Create envelope</button>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-add-transaction">
+  <div class="modal">
+    <div class="modal-header"><h3>Add transaction</h3><svg class="modal-close" data-action="close-modal" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+    <div class="field">
+      <label for="txn-type">Type</label>
+      <select class="input" id="txn-type">
+        <option value="expense">Expense</option>
+        <option value="income">Income</option>
+        <option value="refund">Refund</option>
+      </select>
+    </div>
+    <div class="field"><label for="txn-envelope">Envelope</label><select class="input" id="txn-envelope"></select></div>
+    <div class="field"><label for="txn-amount">Amount</label><input class="input" type="number" id="txn-amount" placeholder="0.00" min="0" step="0.01"></div>
+    <div class="field"><label for="txn-merchant">Merchant / source</label><input class="input" id="txn-merchant" placeholder="e.g. Ikeja Electric"></div>
+    <div class="field"><label for="txn-note">Note</label><input class="input" id="txn-note" placeholder="Optional"></div>
+    <button class="btn btn-primary btn-block" id="add-txn-confirm">Save transaction</button>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-rules">
+  <div class="modal" style="max-width:520px;">
+    <div class="modal-header"><h3>Allocation rules</h3><svg class="modal-close" data-action="close-modal" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+    <p class="text-secondary" style="font-size:13px;margin-bottom:12px;">Percentage rules apply first, in priority order; one remainder rule absorbs whatever's left. Changes apply to the next payslip you confirm.</p>
+    <div id="rules-list"></div>
+    <button class="btn btn-secondary btn-block mt-16" id="reset-rules-btn">Reset to Nigeria-first defaults</button>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-envelope-detail">
+  <div class="modal">
+    <div class="modal-header"><h3 id="env-detail-name">Envelope</h3><svg class="modal-close" data-action="close-modal" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+    <div id="env-detail-body"></div>
+  </div>
+</div>
+
+<div class="toast-container" id="toast-container"></div>
+
+<script src="js/config.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/parser.js"></script>
+<script src="js/envelope-engine.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
